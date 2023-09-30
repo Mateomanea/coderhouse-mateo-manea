@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&display=swap');
+/* font-family: 'Fraunces', serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-gold: #e6b75d;
+    --color-white: #fff;
+    --color-gray-1: #444444;
+    --color-gray-2: #676767;
+    --bg-cream: #fff0e6;
+    --bg-black: #080808;
+    --bg-gray: #141414;
+
+    --font-principal: 'Montserrat', sans-serif;
+    --font-numero: 'Fraunces', serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    background-color: #fff0e6;
+    font-family: var(--font-principal);
+}
+
+h1 {
+    font-size: 4.3rem;
+    padding: .5rem 0;
+}
+
+h2 {
+    font-size: 3.3rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 2.4rem;
+    letter-spacing: 1.12px;
+}
+
+
+a {
+    text-decoration: none;  
+}
+
+ul, 
+ol {
+    list-style: none;
+}
+
+#logoDocta {
+    width: 10rem;
+}
+/* HEADER STYLES */
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    background-color: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.header__nav ul li {
+    display: inline;
+}
+
+.header__nav ul li a { 
+    color: #fff;
+    font-family: var(--font-principal);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1.3px;
+    padding: .5rem 1.2rem;
+    text-shadow: 2px 2px 3px #000;
+    position: relative;
+}
+
+/* HOVER NAV */
+
+.header__nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: .7px;
+    background-color: var(--color-gold);
+    bottom: 4px;
+    left: 50%;
+    box-shadow: 0px 1px 5px 0px #e6b75d;
+    transform: translateX(-50%);
+    transition: width .3s ease-in-out;
+}
+
+.header__nav ul li a:hover::after {
+    width: 70%;
+}
+
+.header__nav ul li a:hover {
+    transition: color .4s ease-out;
+    color: var(--color-gold);
+}
+
+/* FIN HOVER NAV */
+
+.header__redes ul li{
+    display: inline;
+}
+
+.header__redes i {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    transition: all .3s ease-in-out;
+}
+
+.header__redes i:hover {
+    color: var(--color-gold);
+    transform: scale(1.2);
+}
+
+.video{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    overflow: hidden;
+    box-shadow: 0px 15px 70px 2px #000000dd;
+}
+
+#video-background {
+    width: 100%;
+    filter: brightness(0.5);
+}
+
+.arrow {
+    position: absolute;
+    top: 94%;
+    left: 50%;
+}
+
+.arrowDown {
+    font-size: 3rem;
+    color: #d9d9d9c7;
+    text-shadow: 0px -4px 3px #000;
+    transition: all .3s ease-in-out;
+}
+
+.arrow:hover .arrowDown {
+    transform: scale(1.2);
+}
+/* FIN HEADER */    
+
+/* MAIN STYLES */
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    color: var(--color-gray-1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* SECTION DOCTA */
+
+.docta {
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.docta p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 3.5rem;
+    padding: 3rem 0;
+}
+
+.docta__btn {
+    margin-top: 6rem;
+    padding: 2rem 5rem;
+    color: var(--color-white);
+    background-color: #1b1b1b;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 1px solid #444444;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.docta__btn span {
+    color: var(--color-gold);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.docta__btn:hover {
+    letter-spacing: 3px;
+    transform: scale(1.1) rotate(4deg);
+    box-shadow: 0px 0px 15px 3px #1b1b1bb8;
+    background-color: #080808f3;
+    padding: 2rem 5.5rem;
+}
+
+/* FIN SECTION DOCTA */
+
+/* SECTION PASOS */
+
+.pasos {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-gray);
+    color: #fff;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.91) inset;
+}
+
+.pasos__container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pasos__div {
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pasos__div span {
+    font-family: var(--font-numero);
+    font-size: 10rem;
+    padding-bottom: 3rem;
+    text-shadow: 3px 3px 20px var(--color-gold);
+}
+
+.pasos__div h3 {
+    color: var(--color-gold);
+    font-size: 2.5rem;
+    letter-spacing: 1.4px;
+}
+
+.pasos__div p {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1.4rem;
+}
