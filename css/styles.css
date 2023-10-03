@@ -59,15 +59,15 @@ ol {
 }
 
 #logoDocta {
-    width: 10rem;
+    width: 12rem;
 }
-/* HEADER STYLES */
+/* HEADER */
 
 header {
     position: absolute;
     width: 100%;
-    height: 10rem;
-    background-color: none;
+    height: 13rem;
+    background: none;
     color: #fff;
     display: flex;
     justify-content: space-around;
@@ -164,7 +164,7 @@ header {
 }
 /* FIN HEADER */    
 
-/* MAIN STYLES */
+/* MAIN  */
 
 main {
     width: 100%;
@@ -176,6 +176,8 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+/* FIN MAIN */
 
 
 /* SECTION DOCTA */
@@ -274,4 +276,227 @@ main {
     font-size: 2rem;
     font-weight: 300;
     padding: 1.4rem;
+}
+/* FIN SECTION PASOS */
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-white);
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background-color: var(--bg-black);
+}
+
+
+
+.footer h3 {
+    display: inline;
+    font-size: 2rem;
+    border-bottom: 2px solid #e6b75d;
+    border-radius: 7%;
+}
+
+.footer p {
+    font-size: 1.6rem;
+}
+
+.footer ul {
+    padding: 1rem 0;
+}
+
+.footer__info ul li{
+    display: flex;
+    align-items: center;
+}
+
+.footer__info li i {
+    color: #e6b75d; 
+    font-size: 1.6rem;
+    padding: 0.8rem;
+}
+
+.footer__horarios li {
+    font-size: 1.6rem;
+    letter-spacing: 1.12px;
+}
+
+.footer__redes ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__redes ul i {
+    font-size: 1.8rem;
+    color: var(--bg-cream);
+    transition: all .4s ease-in-out;
+}
+
+.footer__redes ul i:hover {
+    color: var(--color-gold);
+}
+
+.footer__bottom  {
+    width: 100%;
+    height: 3rem;
+    background-color: #141414;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.footer__bottom p {
+    color: var(--bg-cream);
+    padding: 0 .3rem;
+}
+
+.footer__bottom p a {
+    color: #e6b75d;
+}
+
+.footer__bottom p a:hover {
+    text-shadow: 0px 0px 7px #e6b75d;
+}
+
+
+/* FIN FOOTER */
+/* FIN INDEX*/
+
+/* HEADER PAGES */
+
+.header__img {
+    width: 100%;
+    height: 30rem;
+    background-image: url(../assets/img/backgrounds/background-maquina-l.jpg);
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-size: cover;
+    z-index: -50;
+    
+}
+
+.header__img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    background: rgba(0, 0, 0, 0.55); 
+    box-shadow: 0px 5px 100px 0px #000000cb;
+}
+
+/* COMIENZO SECTION EQUIPO */
+
+.equipo {
+    width: 100%;
+    background-color: var(--bg-gray);
+    color: var(--bg-cream);
+    text-align: center;
+}
+
+.equipo h3 {
+    border-bottom: 3px solid var(--color-gold);
+    font-size: 4.3rem;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    border-radius: 5%;
+    display: inline-block;
+}
+
+.equipo p {
+    padding: 2rem 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+.equipo__cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 3rem;
+}
+
+.card {
+    width: 30rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-black);
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px 0px #000000;
+    transition: box-shadow .2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 30px 2px #000000;
+}
+
+.card__imgContainer {
+    width: 100%;
+    height: 20rem;
+    display: block;
+    overflow: hidden;
+    
+}
+
+.card__imgContainer img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+.card__datos {
+    text-align: center;
+    overflow: hidden;
+}
+
+.card__datos--nombre {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.card__datos--estilos {
+    color: var(--color-gold);
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.card__redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__redes li {
+    font-size: 2.2rem;
+    padding: .5rem;
+    margin-left: 2rem;
+}
+
+.card__redes li a {
+    color: var(--bg-cream);
+}
+
+.card__redes li a:hover {
+    transition: all .2s ease-in;
+    text-shadow: 0px 0px 10px var(--color-gold);
 }
