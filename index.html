@@ -9,21 +9,21 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
-    
+
     <!-- BOOTSTRAP -->
 </head>
 
 <body>
-    <header>
-        <h1 class="header__title">Docta Tattoo</h1>
+    <header class="header--index">
+        <img src="./assets/img/logo-edit.png" alt="Logo Docta Tattoo" id="logoDocta" class="footer__logo--img">
 
         <nav class="header__nav">
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./assets/pages/artistas.html">Artistas</a></li>
-                <li><a href="./assets/pages/estudio.html">Estudio</a></li>
-                <li><a href="./assets/pages/galeria.html">Galería</a></li>
-                <li><a href="./assets/pages/contacto.html">Contacto</a></li>
+                <li><a href="./pages/artistas.html">Artistas</a></li>
+                <li><a href="./pages/estudio.html">Estudio</a></li>
+                <li><a href="./pages/galeria.html">Galería</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
@@ -37,12 +37,12 @@
         </div>
     </header>
 
-    <section class="video">
+    <div class="video">
         <video id="video-background" src="./assets/video/video-presentacion.mp4" muted loop autoplay>
         </video>
-    </section>
+    </div>
 
-    <a href="#main" class="arrow">    
+    <a href="#main" class="arrow">
         <i class="fa-solid fa-arrow-down arrowDown"></i>
     </a>
 
@@ -53,78 +53,89 @@
             <h1 class="docta__title">DOCTA TATTOO</h1>
             <h2 class="docta__subtitle">Estudio de tatuajes y piercing</h2>
             <span class="docta__linea"></span>
-            <p class="docta__p">DOCTA TATTOO es un concepto revolucionario nunca antes visto en Córdoba. Se trata de la unión de 3 profesionales al servicio de los clientes más exigentes en el mundo de los tatuajes en cuanto a acabado, precio, tiempo de espera, reservas, dedicación y seguimiento del diseño. Mateo, Lucas y Abril forman la familia de DOCTA TATTOO. Ellos son los encargados de que, sea cual sea tu idea para llevarla a tinta, se haga realidad.</p>
+            <p class="docta__p">DOCTA TATTOO es un concepto revolucionario nunca antes visto en Córdoba. Se trata de la
+                unión de 3 profesionales al servicio de los clientes más exigentes en el mundo de los tatuajes en cuanto
+                a acabado, precio, tiempo de espera, reservas, dedicación y seguimiento del diseño. Mateo, Lucas y Abril
+                forman la familia de DOCTA TATTOO. Ellos son los encargados de que, sea cual sea tu idea para llevarla a
+                tinta, se haga realidad.</p>
 
             <a class="docta__btn">Quiero un turno <span>!</span></a>
-            
-        </section>  
 
+        </section>
         <section class="pasos">
             <div class="pasos__container">
                 <div class="pasos__div">
                     <span>1</span>
                     <h3>ELIGE TU TATUADOR</h3>
-                    <p>3 visiones personalizadas del mundo del tatuaje, 3 tatuadores con innumerables premios y reconocimientos por su carrera como tatuadores profesionales.</p>
+                    <p>3 visiones personalizadas del mundo del tatuaje, 3 tatuadores con innumerables premios y
+                        reconocimientos por su carrera como tatuadores profesionales.</p>
                 </div>
                 <div class="pasos__div">
                     <span>2</span>
                     <h3>RESERVA TU CITA</h3>
-                    <p>No tendrás que esperar meses y meses como en otros sitios. Dependiendo del diseño que te quieras hacer, podemos darte cita ¡incluso en el mismo día!</p>
+                    <p>No tendrás que esperar meses y meses como en otros sitios. Dependiendo del diseño que te quieras
+                        hacer, podemos darte cita ¡incluso en el mismo día!</p>
                 </div>
                 <div class="pasos__div">
                     <span>3</span>
                     <h3>TATÚATE</h3>
-                    <p>Somos transparentes desde el primer contacto para que puedas decidir con tranquilidad y con confianza máxima. ¡Ven a vernos cuando quieras!</p>
-                </div>  
+                    <p>Somos transparentes desde el primer contacto para que puedas decidir con tranquilidad y con
+                        confianza máxima. ¡Ven a vernos cuando quieras!</p>
+                </div>
             </div>
         </section>
     </main>
 
 
-    <footer>
-        <div class="footer__logo">
-            <img src="./assets/img/logo-edit.png" alt="Logo Docta Tattoo" id="logoDocta" class="footer__logo-docta">
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__logo">
+                <img src="./assets/img/logo-edit.png" alt="Logo Docta Tattoo" id="logoDocta" class="footer__logo--img">
+            </div>
+
+            <div class="footer__info">
+                <h3>Información</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Bv. Los Andes 2344, Córdoba (Argentina)</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>+54 3537 598831</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>doctatattoo@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__horarios">
+                <h3>Horarios</h3>
+                <ul>
+                    <li>Lunes a Jueves ...... 09:00Hs a 18:00Hs</li>
+                    <li>Viernes ............. 10:00Hs a 17:00Hs</li>
+                    <li>Sábados ............. 10:00Hs a 15:00Hs</li>
+                    <li>Domingos ............ Cerrado</li>
+                </ul>
+            </div>
+
+            <div class="footer__redes">
+                <h3>Seguinos</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=es/" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="footer__info">
-            <h2>Información</h2>
-            <ul>
-                <li>
-                    <i></i>
-                    <p>Bv. Los Andes 2344, Córdoba (Argentina)</p>
-                </li>
-                <li>
-                    <i></i>
-                    <p>+54 3537 598831</p>
-                </li>
-                <li>
-                    <i></i>
-                    <p>doctatattoo@gmail.com</p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer__horarios">
-            <ul>
-                <li>Lunes a Jueves ...... 09:00Hs a 18:00Hs</li>
-                <li>Viernes ............. 10:00Hs a 17:00Hs</li>
-                <li>Sábados ............. 10:00Hs a 15:00Hs</li>
-                <li>Domingos ............ Cerrado</li>
-            </ul>
-        </div>
-
-        <div class="footer__redes">
-            <ul>
-                <li><a href="https://www.instagram.com/" target="_blank"><i>I</i></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><i>Y</i></a></li>
-                <li><a href="https://www.facebook.com/" target="_blank"><i>F</i></a></li>
-            </ul>
-        </div>
-
-        <div class="footer__derechos">
+        <div class="footer__bottom">
             <p>Docta Tattoo &copy; 2023 Todos los derechos reservados.</p>
-            <p>Diseño por <a href="https://www.linkedin.com/in/mateo-mane/" target="_blank" class="footer__derechos-perfil">Mateo
-                    Manea</a></p>
+            <p>Diseño por <a href="https://www.instagram.com/">Mateo Manea</a></p>
         </div>
     </footer>
 
