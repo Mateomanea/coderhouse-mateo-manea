@@ -656,6 +656,184 @@ main {
     background: rgba(0, 0, 0, .7);
 }
 
+/* MEDIAQUERIS GALERIA */
 
+@media screen and (max-width: 800px) {
+    .galeria__container {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+    }
+
+    .galeria__container .galeria__box:nth-child(4) {
+        grid-column-start: span 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .galeria__container {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .galeria__container .galeria__box img {
+        height: 200px;
+    }
+}
+
+/* FIN MEDIAQUERIS GALERIA */
 
 /* FIN GALERIA */
+
+/* CONTACTO HTML */
+
+.contacto {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contacto__title {
+    color: var(--bg-cream);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4.3rem;
+    margin-bottom: 5rem;
+    padding: 1rem 0;
+    border-bottom: 4px solid var(--color-gold);
+    border-radius: 5%;
+    display: inline-block;
+}
+
+.contacto__form {
+    width: 70%;
+    height: auto;/* 
+    border: 1px solid var(--color-gold); */
+    background-color: var(--bg-gray);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.formLeft,
+.formRight {
+    width: 50%;
+    color: var(--bg-cream);
+}
+
+.formLeft p {
+    text-align: center;
+}
+
+.formLeft p:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-gold);
+}
+
+.formLeft p:nth-child(2) {
+    font-size: 2rem;
+    padding: 1rem  0;
+    font-weight: 300;
+}
+
+.formLeft__redes {
+    width: 100%;
+    padding: 1rem;
+}
+
+.formLeft__redes ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLeft__redes ul li a {
+    padding: .5rem 1.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--bg-cream);
+    transition: color .3s ease-in-out;
+}
+
+.formLeft__redes ul li a:hover {
+    color: var(--bg-black); 
+    text-shadow: 0px 0px 20px var(--color-gold);
+}
+
+.formRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formRight div {/* 
+    border: 1px solid blue; */
+    width: 70%;
+}
+
+.formRight label {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.formRight input, textarea {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-white);
+    letter-spacing: 1.4px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color-gold);
+    border-radius: 5px;
+    background-color: var(--bg-black);
+    margin-bottom: 2rem;
+    padding: .8rem;
+}
+
+.formRight textarea {
+    height: 10rem;
+    font-size: 1.6rem;
+    line-height: 20px;
+}
+
+#check {
+    width: 1.4rem;
+    margin: 1rem;
+}
+
+.formRight div:nth-child(4) {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+}
+
+.formRight button {
+    width:  20rem;
+    height: 4rem;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+.formRight div:nth-child(6) {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    

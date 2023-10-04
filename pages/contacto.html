@@ -9,9 +9,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
-    
+
     <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -31,8 +32,7 @@
         <div class="header__redes">
             <ul>
                 <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://twitter.com/?lang=es/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                </li>
+                <li><a href="https://twitter.com/?lang=es/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
                 <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
         </div>
@@ -45,16 +45,69 @@
     <!-- CONTENIDO PRINCIPAL -->
 
     <main id="main">
-        
+        <section class="contacto">
+            <h1 class="contacto__title">Contactanos</h1>
+
+            <div class="contacto__form">
+                <div class="formLeft">
+                    <p>
+                        ¿AÚN NO NOS CONOCES? <br> ¡VEN A VERNOS CUANDO QUIERAS!
+                    </p>
+                    <p>
+                        El tiempo de espera es mínimo, no tendrás que esperar meses y meses como en otros sitios. Dependiendo del diseño que te quieras hacer podemos darte cita ¡incluso en el mismo día! Además como contamos con 6 visiones personalizadas del mundo del tatuaje te daremos cita siempre con el más adecuado para tu diseño, ya sea por estilo y por forma de tatuar.
+                    </p>
+
+                    <div class="formLeft__redes">
+                        <ul>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=es/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form class="formRight">
+                    <div>
+                        <label for="name">Nombre*</label> <br>
+                        <input type="text" id="name" required>
+                    </div>
+    
+                    <div>
+                        <label for="email">Email*</label> <br>
+                        <input type="email" id="email" required placeholder="name@ejemplo.com">
+                    </div>
+    
+                    <div>
+                        <label for="phone">Teléfono</label> <br>
+                        <input type="number" id="phone">
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="check" required><label for="check">Tengo 18 o más.</label>
+                    </div>
+    
+                    <div>
+                        <textarea name="mensaje" id="mensaje" maxlength="200" required style="resize: none;" placeholder="Dejanos tus dudas">
+    
+                        </textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__logo">
-                <img src="../assets/img/logo-white.png" alt="Logo Docta Tattoo" id="logoDocta" class="footer__logo--img">
+                <img src="../assets/img/logo-white.png" alt="Logo Docta Tattoo" id="logoDocta"
+                    class="footer__logo--img">
             </div>
-    
-            <div class="footer__info">  
+
+            <div class="footer__info">
                 <h3>Información</h3>
                 <ul>
                     <li>
@@ -71,7 +124,7 @@
                     </li>
                 </ul>
             </div>
-    
+
             <div class="footer__horarios">
                 <h3>Horarios</h3>
                 <ul>
@@ -81,17 +134,19 @@
                     <li>Domingos ............ Cerrado</li>
                 </ul>
             </div>
-    
+
             <div class="footer__redes">
                 <h3>Seguinos</h3>
                 <ul>
-                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
                     <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="https://twitter.com/?lang=es/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=es/" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer__bottom">
             <p>Docta Tattoo &copy; 2023 Todos los derechos reservados.</p>
             <p>Diseño por <a href="https://www.instagram.com/">Mateo Manea</a></p>
@@ -105,7 +160,9 @@
     <script src="https://kit.fontawesome.com/44be66d05a.js" crossorigin="anonymous"></script>
 
     <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
