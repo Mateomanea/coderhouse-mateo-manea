@@ -51,7 +51,9 @@ ol {
     width: 12rem;
 }
 
+
 /* INDEX HTML */
+
 /* HEADER */
 
 
@@ -651,132 +653,6 @@ main {
     background: rgba(0, 0, 0, .7);
 }
 
-/* MEDIAQUERIS GALERIA */
-
-@media screen and (max-width: 850px) {
-
-    .header__img {
-        height: 15rem;
-    }
-
-    .header__imgArtistas::after,
-    .header__imgGaleria::after,
-    .header__imgEstudio::after,
-    .header__imgContacto::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 15rem;
-        background: rgba(0, 0, 0, 0.55); 
-        box-shadow: none;
-}
-
-    .galeria__container {
-        width: 95%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1rem;
-        grid-template-rows: 20rem;
-    }
-
-    .galeria__container .galeria__box:nth-child(4) {
-        grid-column-start: span 1;
-    }
-
-    .footer__logo {
-        display: none;
-    }
-    
-    
-    .footer p {
-        font-size: 1.5rem;
-    }
-        
-    .footer__redes  {
-        display: none;
-    }
-    
-}
-
-@media screen and (max-width: 800px) {
-    .header__nav,
-    .header__redes  {
-        display: none;
-    }
-
-    .header__img {
-        position: relative;
-        height: 12rem;
-    }
-    
-    .header__toggle {
-        display: block;
-        position: absolute;
-        right: 2rem;
-    }
-
-    .header__toggle a { 
-        font-size: 2.4rem;
-        color: var(--color-white);
-        padding: 0.5rem;
-    }
-
-    #logoDocta{
-        width: 10rem;
-        position: relative;
-        transform: translateY(-10px);
-    }
-
-    .header__imgArtistas::after,
-    .header__imgGaleria::after,
-    .header__imgEstudio::after,
-    .header__imgContacto::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 12rem;
-        background: rgba(0, 0, 0, 0.55); 
-        box-shadow: none;
-}
-
-}
-
-@media screen and (max-width: 700px) {
-    .footer__logo {
-        display: none;
-    }
-
-    .footer__info {
-        display: none;
-    }
-    
-    
-    .footer p {
-        font-size: 1rem;
-    }
-        
-    .footer__redes  {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    
-    .galeria__container {
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .galeria__container .galeria__box img {
-        height: 20rem;
-    }
-}
-
-/* FIN MEDIAQUERIS GALERIA */
-
 /* FIN GALERIA */
 
 
@@ -998,3 +874,188 @@ main {
 /* FIN CONTACTO */
 
 /* MEDIAS QUERYS */
+
+@media screen and (max-width: 850px) {
+
+    .header__img {
+        height: 15rem;
+    }
+
+    .header__imgArtistas::after,
+    .header__imgGaleria::after,
+    .header__imgEstudio::after,
+    .header__imgContacto::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15rem;
+        background: rgba(0, 0, 0, 0.55); 
+        box-shadow: none;
+    }
+
+    /* MEDIA GALERIA */
+
+    .galeria__container {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        grid-template-rows: 20rem;
+    }
+
+    .galeria__container .galeria__box:nth-child(4) {
+        grid-column-start: span 1;
+    }
+
+    /* FIN MEDIA GALERIA */
+
+    .footer__logo {
+        display: none;
+    }
+    
+    
+    .footer p {
+        font-size: 1.5rem;
+    }
+        
+    .footer__redes  {
+        display: none;
+    }
+    
+    /* MEDIA ESTUDIO */
+
+    .estudio {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .estudio__carousel {
+        width: 90%;
+        height: 30rem;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header__nav,
+    .header__redes  {
+        display: none;
+    }
+
+    .header__img {
+        position: relative;
+        height: 12rem;
+    }
+    
+    .header__toggle {
+        display: block;
+        position: absolute;
+        right: 2rem;
+    }
+
+    .header__toggle a { 
+        font-size: 2.4rem;
+        color: var(--color-white);
+        padding: 0.5rem;
+    }
+
+    #logoDocta{
+        width: 10rem;
+        position: relative;
+        transform: translateY(-10px);
+    }
+
+    .header__imgArtistas::after,
+    .header__imgGaleria::after,
+    .header__imgEstudio::after,
+    .header__imgContacto::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12rem;
+        background: rgba(0, 0, 0, 0.55); 
+        box-shadow: none;
+}
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .estudio {
+        max-width: 95%;
+    }
+    
+    .estudio p {
+        padding: 0;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    
+} 
+
+@media screen and (max-width: 700px) {
+    .footer__logo {
+        display: none;
+    }
+
+    .footer__info {
+        display: none;
+    }
+    
+    
+    .footer p {
+        font-size: 1rem;
+    }
+        
+    .footer__redes  {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .galeria__container {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .galeria__container .galeria__box img {
+        height: 20rem;
+    }
+
+    /* MEDIA ESTUDIO */
+    .estudio {
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .estudio h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 5%;
+        display: inline-block;
+    }
+    
+    .estudio p {
+        color: var(--color-gray-1);
+        padding: 1rem 0;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    
+    .estudio__carousel {
+        width: 90%;
+        height: 25rem;
+    }
+}
+
+/* FIN MEDIAQUERIS */
