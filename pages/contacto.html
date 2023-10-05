@@ -32,7 +32,8 @@
         <div class="header__redes">
             <ul>
                 <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://twitter.com/?lang=es/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://twitter.com/?lang=es/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </li>
                 <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
             </ul>
         </div>
@@ -54,48 +55,102 @@
                         ¿AÚN NO NOS CONOCES? <br> ¡VEN A VERNOS CUANDO QUIERAS!
                     </p>
                     <p>
-                        El tiempo de espera es mínimo, no tendrás que esperar meses y meses como en otros sitios. Dependiendo del diseño que te quieras hacer podemos darte cita ¡incluso en el mismo día! Además como contamos con 6 visiones personalizadas del mundo del tatuaje te daremos cita siempre con el más adecuado para tu diseño, ya sea por estilo y por forma de tatuar.
+                        El tiempo de espera es mínimo, no tendrás que esperar meses y meses como en otros sitios.
+                        Dependiendo del diseño que te quieras hacer podemos darte cita ¡incluso en el mismo día! Además
+                        como contamos con 6 visiones personalizadas del mundo del tatuaje te daremos cita siempre con el
+                        más adecuado para tu diseño, ya sea por estilo y por forma de tatuar.
                     </p>
 
                     <div class="formLeft__redes">
                         <ul>
-                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="https://twitter.com/?lang=es/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=es/" target="_blank"><i
+                                        class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank"><i
+                                        class="fa-brands fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
 
-                <form class="formRight">
+                <form class="formRight" method="post">
                     <div>
                         <label for="name">Nombre*</label> <br>
                         <input type="text" id="name" required>
                     </div>
-    
+
                     <div>
                         <label for="email">Email*</label> <br>
                         <input type="email" id="email" required placeholder="name@ejemplo.com">
                     </div>
-    
+
                     <div>
                         <label for="phone">Teléfono</label> <br>
                         <input type="number" id="phone">
                     </div>
-    
+
                     <div>
                         <input type="checkbox" id="check" required><label for="check">Tengo 18 o más.</label>
                     </div>
-    
+
                     <div>
-                        <textarea name="mensaje" id="mensaje" maxlength="200" required style="resize: none;" placeholder="Dejanos tus dudas">
-    
+                        <textarea name="mensaje" id="mensaje" maxlength="200" required style="resize: none;"
+                            placeholder="Dejanos tus dudas">
                         </textarea>
                     </div>
-                    
+
                     <div>
                         <button type="submit">Enviar</button>
                     </div>
                 </form>
+            </div>
+
+            <div class="contacto__acordeon">
+                <h2>Faq</h2>
+                <div class="accordion acordeon" id="accordionExample">
+                    <div class="accordion-item w-auto">
+                        <h3 class="accordion-header border border-warning">
+                            <button class="accordion-button fs-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-controls="collapseOne aria-controls="collapseOne">
+                                Hay que dejar seña?
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body border border-warning">
+                                <p>
+                                    Para apartar una cita es necesario de dejar una señal de un 25% respecto al valor total del tatuaje. Las señales no se devuelven en caso de no acudir a la cita.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item w-100">
+                        <h3 class="accordion-header border border-warning">
+                            <button class="accordion-button collapsed fs-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Hacén Piercings? 
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse w-auto" data-bs-parent="#accordionExample">
+                            <div class="accordion-body border border-warning">
+                                <p>No, no hacemos piercings en matasuegras, nuestro trabajo sólo va orientado al tattoo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item w-100">
+                        <h3 class="accordion-header border border-warning">
+                            <button class="accordion-button collapsed fs-2" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Suministrais anestesia o alguna crema para disminuir el dolor?
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse w-auto" data-bs-parent="#accordionExample">
+                            <div class="accordion-body border border-warning">
+                                <p> No, no disponemos, ni suministramos ningún tipo de anestesia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
