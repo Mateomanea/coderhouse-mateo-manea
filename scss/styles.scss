@@ -1,2 +1,541 @@
-@import "reset";
 @import "variables";
+@import "base";
+@import "header";
+@import "footer";
+@import "mediasQuerys";
+
+/* COMIENZO INDEX */
+
+/* BACKGROUND VIDEO */
+.video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -100;
+    overflow: hidden;
+    box-shadow: 0px 15px 70px 2px #000000dd;
+
+    &__mp4 {
+        width: 100%;
+        filter: brightness(0.5);
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 94%;
+    left: 50%;
+
+    &__icon {
+        @include textos(#d9d9d9c7,3rem,none);
+        text-shadow: 0px -4px 3px #000;
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover &__icon {
+        transform: scale(1.2);
+    }
+}
+
+/* FIN BACKGROUND VIDEO */
+
+/* MAIN */
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    color: $color-gray-1;
+
+    @include flex(flex,column,center,center);
+}
+
+/* FIN MAIN */
+
+/* SECTION DOCTA */
+
+.docta {
+    max-width: 1200px;
+    height: 100vh;
+    @include flex(flex, column, center, center);
+
+    &__title {
+         @extend %titleStyles;
+    }
+
+    &__subtitle {
+        font-size: 3.3rem;
+        font-weight: 400;   
+        color: $color-gray-2;
+    }
+
+    &__p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 3.5rem;
+        padding: 3rem 0;
+    }
+
+    &__btn {
+        @include textos($color-white, 1.6rem, uppercase);
+        margin-top: 6rem;
+        padding: 2rem 5rem;
+        background-color: #1b1b1b;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        border: 1px solid #444444;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        & span {
+            @include textos($color-gold,2rem,none);
+            font-weight: bold;
+        }
+
+        &:hover {
+            letter-spacing: 3px;
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0px 0px 15px 3px #1b1b1bb8;
+            background-color: #080808f3;
+        }
+    }
+}
+
+/* FIN SECTION DOCTA */
+
+/* SECTION PASOS */
+
+.pasos {
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-gray;
+    color: #fff;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.91) inset;
+
+    &__container {
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        @include flex(flex,row,space-evenly,center);
+    }
+
+    &__div {
+        width: 350px;
+        height: 900px;
+        text-align: center;
+        @include flex(flex,column,center,center);
+        & span {
+            font-family: $font-numero;
+            font-size: 10rem;
+            padding-bottom: 1rem;
+            text-shadow: 3px 3px 20px $color-gold;
+        }
+
+        & h3 {
+            @include textos($color-gold,2.5rem,none);
+            letter-spacing: 1.4px;
+        }
+
+        & p {
+            font-size: 2rem;
+            font-weight: 300;
+            padding: 1.4rem;
+        }
+    }
+}
+
+/* FIN SECTION PASOS */
+/* FIN INDEX */
+
+/* COMIENZO ARTISTAS */
+/* SECTION EQUIPO */
+
+.equipo {
+    width: 100%;
+    background-color: $bg-gray;
+    color: $bg-cream;
+    text-align: center;
+
+    &__title {
+        @extend %titleStyles;
+    }
+
+    &__descripcion {
+        padding: 2rem 5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-weight: 300;
+        line-height: 34px;
+    }
+
+    &__cards {
+        max-width: 1200px;
+        margin: 0 auto;
+        @include flex (flex, row, space-evenly, center);
+        margin-top: 5rem;
+        padding: 3rem;
+    }
+
+    .card {
+        width: 30rem;
+        height: 33rem;
+        display: flex;
+        flex-direction: column;
+        background: $bg-black !important;
+        border-radius: 7px;
+        overflow: hidden;
+        box-shadow: 10px 10px 15px 0px #000000;
+        transition: box-shadow .2s ease-in-out;
+
+        &:hover {
+            box-shadow: 10px 10px 30px 2px #000000;
+        }
+
+        &__imgContainer {
+            width: 100%;
+            height: 20rem;
+            display: block;
+            overflow: hidden;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                filter: grayscale(100%);
+            }
+        }
+
+        &__datos {
+            text-align: center;
+            overflow: hidden;
+
+            &--nombre {
+                @include textos($color-white,2.5rem,none);
+                font-weight: bold;
+                margin: 0;
+            }
+
+            &--estilos {
+                @include textos($color-gold,1.3rem,none);
+                font-style: italic;
+                font-weight: 300;
+                margin: 0;
+            }
+        }
+
+        &__redes {
+            @include flex(flex, row, center, center);
+            padding-top: 2rem;
+
+            & li {
+                font-size: 2.2rem;
+                padding: .5rem;
+
+                    & a {
+                        color: $bg-cream;
+                        padding: 1rem;
+
+                        &:hover {
+                            transition: all .2s ease-in;
+                            text-shadow: 0px 0px 10px $color-gold
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+/* FIN ARTISTAS */
+/* FIN SECTION EQUIPO */
+
+/* COMIENZO ESTUDIO */
+
+.estudio {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    & h1 {
+        @extend %titleStyles;
+    }
+
+    & p {
+        color: $color-gray-1;
+        padding: 2rem 5rem;
+        font-weight: 400;
+        line-height: 34px;
+    }
+
+    &__carousel {
+        width: 100%;
+        height: 50rem;
+        @include flex(flex, row, center, center);
+        overflow: hidden;
+        box-shadow: 0px 0px 30px 0px #00000089;
+        border-radius: 20px;
+    }
+}
+
+/* FIN ESTUDIO */
+
+/* COMIENZO GALERIA */
+
+.galeria {
+    width: 100%;
+    background-color: $bg-gray;
+    @include flex(flex,column,center,center);
+    padding: 6rem 0;
+
+    &__title {
+        color: $bg-cream;
+        text-align: center;
+        @extend %titleStyles;
+        margin-bottom: 5rem;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 25rem;
+        grid-gap: 1.5rem;
+
+        & .galeria__box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+
+            & figure {
+                width: 100%;
+                height: 100%;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            &:nth-child(4){
+                grid-column-start: span 2;
+            }
+    
+            &:nth-child(9){
+                grid-column-start: span 2;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .4);
+                opacity: 0;
+                transition: opacity .2s ease-in-out, 
+                background .3s ease-in-out
+            }
+
+            &:hover::before {
+                opacity: 1;
+                background: rgba(0, 0, 0, .7);
+            }
+    
+        }
+    }
+}
+
+/* FIN GALERIA */
+
+/* COMIENZO CONTACTO */
+
+.contacto {
+    width: 100%;
+    height: auto;
+    background-color: $bg-gray;
+    @include flex(flex,column,space-around,center);
+
+    &__title {
+        color: $bg-cream;
+        text-align: center;
+        @extend %titleStyles;
+        margin-bottom: 5rem;
+    }
+
+    &__form {
+        width: 70%;
+        background-color: $bg-gray;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+
+        & .formLeft {
+            width: 50%;
+            color: $bg-cream;
+
+            & p {
+                text-align: center;
+                &:first-child {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: $color-gold;
+                }
+                &:nth-child(2) {
+                    font-size: 2rem;
+                    padding: 1rem 0;
+                    font-weight: 300;
+                }
+            }
+
+            &__redes {
+                width: 100%;
+                padding: 1rem;
+
+                & ul {
+                    @include flex(flex,row,center,center);
+
+                    & a {
+                        padding: .5rem 1.5rem;
+                        @include textos($bg-cream,3rem,none);
+                        text-decoration: none;
+                        transition:  all .3s ease-in-out;
+
+                        &:hover {
+                            transition: all .3s ease-in-out;
+                            color: $bg-black;
+                            text-shadow: 0px 0px 20px $color-gold;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        & .formRight {
+            width: 50%;
+            color: $bg-cream;
+            @include flex(flex,column,center,center);
+
+            & div {
+                width: 70%;
+
+                & label {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    letter-spacing: 1.5px;
+                }
+
+                & input, textarea {
+                    width: 100%;
+                    height: 3rem;
+                    @include textos($color-white,1.4rem,none);
+                    font-weight: 300;
+                    letter-spacing: 1.4px;
+                    outline: none;
+                    border: none;
+                    border-bottom: 2px solid $color-gold;
+                    border-radius: 5px;
+                    background-color: $bg-black;
+                    margin-bottom: 2rem;
+                    padding: .8rem;
+                }
+
+                & textarea {
+                    height: 10rem;
+                    font-size: 1.2rem;
+                    line-height: 15px;
+                }
+
+                & #check {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    margin: 1.2rem 1rem;
+                }
+
+                &:nth-child(4) {
+                    height: 2rem;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                }
+                &:nth-child(6) {
+                    padding: 1rem;
+                    @include flex(flex,row,center,center);
+                }
+
+                & button {
+                    width: 20rem;
+                    height: 4rem;
+                    @include textos(#c0a362,1.8rem,uppercase);
+                    font-weight: 600;
+                    letter-spacing: .3rem;
+                    border: 2px solid #c1a362;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    background-color: $bg-black;
+                    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+                    overflow: hidden;
+
+                    &:hover {
+                        box-shadow: 0 0 10px #e6b65dc5;
+                    }
+                    &:active {
+                        scale: 1.2;
+                    }
+                }
+            }
+        }
+    }
+
+    /* FAQS */
+    &__acordeon {
+        width: 700px;
+        height: auto;
+        @include flex(flex,column,center,center);
+        padding-bottom: 3rem;
+
+        & .acordeon {
+            width: 700px;
+            padding: 2rem 0;
+
+            & .accordion-item {
+                margin-bottom: 1rem;
+            }
+
+            & .accordion-body {
+                color: $color-white;
+                background-color: $bg-black;
+                box-shadow: 0px 0px 20px 0px $color-gray-2;
+
+                & p {
+                    font-size: 2rem;
+                    font-weight: 300;
+                    line-height: 23px;
+                    letter-spacing: 1.1px;
+                }
+            }
+
+            & .accordion-button {
+                color: $color-gold !important;
+                background-color: #000 !important;
+            }
+        }
+
+        & h2 {
+            color: $bg-cream;
+            font-size: 4.3rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            padding: .6rem 0;
+            border-bottom: 4px solid $color-gold;
+            border-radius: 5%;
+            display: inline-block;
+        }
+    }
+}
+
+/* FIN FAQS */
+/* FIN CONTACTO */

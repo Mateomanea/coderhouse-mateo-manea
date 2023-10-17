@@ -1,0 +1,102 @@
+header {
+    position: absolute;
+    width: 100%;
+    height: 13rem;
+    background: none;
+    color: $color-white;
+    @include flex(flex,row,space-around,center);
+    z-index: 100;
+}
+
+/* HEADER INDEX */
+
+.header__nav ul li {
+    @extend %displayInline;
+
+    & a {
+        @include textos($color-white, 1.5rem, uppercase);
+        font-family: $font-principal;
+        text-decoration: none;
+        letter-spacing: 1.3px;
+        padding: .5rem 1.2rem;
+        text-shadow: 2px 2px 3px #000;
+        position: relative;
+
+        &:hover{
+            transition: color .4s ease-out;
+            color: $color-gold;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: .7px;
+            background-color: $color-gold;
+            bottom: 4px;
+            left: 50%;
+            box-shadow: 0px 1px 5px 0px $color-gold;
+            transform: translateX(-50%);
+            transition: width .3s ease-in-out;
+        }
+
+        &:hover::after {
+            width: 70%;
+        }
+    }
+}
+
+.header__toggle {
+    display: none;
+}
+
+.header__redes ul li {
+    @extend %displayInline;
+}
+
+.header__redes i {
+    @include textos($color-white,1.9rem,none);
+    margin-left: 2rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        color: $color-gold;
+        transform: scale(1.2);
+    }
+}
+
+/* FIN HEADER INDEX */
+
+/* HEADER PAGES */
+
+.header__img{
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    z-index: -50;
+}
+.header__imgArtistas,
+.header__imgGaleria,
+.header__imgContacto {
+    background-image: url(../assets/img/backgrounds/background-maquina-l.jpg);
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-size: cover;
+}
+
+.header__imgEstudio {
+    background-image: url(../assets/img/img-estudio-artistas/estudio.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.header__imgArtistas::after,
+.header__imgGaleria::after,
+.header__imgEstudio::after,
+.header__imgContacto::after {
+    @extend %headerImgAfter;
+}
+
+/* FIN HEADER PAGES */
+
