@@ -1,6 +1,72 @@
 /* COMIENZO MEDIA QUERYS */
 
+/* NO PUEDO SOLUCIONAR ESPACIO EN BLANCO A LA DERECHA ENTRE
+min-width: 852px and max-width: 1200px*/
+
 @media screen and (max-width: 850px) {
+
+    /* MEDIA INDEX VIDEO */
+    .video {
+        border: 1px solid red;
+        height: 13rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    /* SECTION DOCTA */
+    .docta {
+        height: 100vh;
+
+        &__p {
+            width: 98%;
+            line-height: 2.9rem;
+        }
+
+        &__btn {
+            margin-top: 3rem;
+
+            &:hover {
+                letter-spacing: 1px;
+                transform: none;
+                box-shadow: 0px 0px 15px 3px #1b1b1bb8;
+                background-color: #080808f3;
+            }
+        }
+    }
+
+    /* SECTION PASOS */
+    .pasos__container {
+        width: 100%;
+        @include flex(flex,column,center,center);
+        overflow: hidden;
+    }
+
+    .pasos__div {
+        width: 85%;
+        height: 200px;
+        text-align: center;
+        @include flex(flex,column,center,center);
+        & span {
+            font-family: $font-numero;
+            font-size: 5rem;
+            font-weight: bold;
+            text-shadow: 3px 3px 20px $color-gold;
+        }
+
+        & h3 {
+            @include textos($color-gold,1.9rem,none);
+            letter-spacing: 1.4px;
+        }
+
+        & p {
+            font-size: 1.7rem;
+            font-weight: 300;
+            padding: 0rem;
+        }
+    }
+    /* MEDIA HEADER */
 
     .header__img {
         height: 15rem;
@@ -20,6 +86,8 @@
         box-shadow: none;
     }
 
+    /* FIN MEDIA HEADER */
+
     /* MEDIA GALERIA */
 
     .galeria__container {
@@ -38,19 +106,6 @@
     }
 
     /* FIN MEDIA GALERIA */
-
-    .footer__logo {
-        display: none;
-    }
-    
-    
-    .footer p {
-        font-size: 1.5rem;
-    }
-        
-    .footer__redes  {
-        display: none;
-    }
     
     /* MEDIA ESTUDIO */
 
@@ -65,6 +120,23 @@
             margin: 0 auto;
         }
     }
+
+    /* FIN ESTUDIO */
+
+    /* MEDIA FOOTER */
+    .footer__logo {
+        display: none;
+    }
+    
+    
+    .footer p {
+        font-size: 1.5rem;
+    }
+        
+    .footer__redes  {
+        display: none;
+    }
+    /* FIN MEDIA FOOTER */
 }
 
 @media screen and (max-width: 800px) {
@@ -146,13 +218,75 @@
 }
 
 @media screen and (max-width: 500px) {
-    
-    .galeria__container {
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
 
-        & .galeria__box img {
-            height: 20rem;
+    /* SECTION DOCTA */
+    .docta {
+        height:100vh;
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__subtitle {
+            font-size: 2.5rem;
+        }
+
+        &__p {
+            font-size: 2rem;
+            width: 98%;
+            line-height: 2.9rem;
+        }
+
+        &__btn {
+            @include textos($color-white, 1.2rem, uppercase);
+            margin-top: 0rem;
+            padding: 1rem 3rem;
+            background-color: #1b1b1b;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: 700;
+            border: 1px solid #444444;
+            transition: all .3s ease-in-out;
+            letter-spacing: 1.4px;
+            cursor: pointer;
+    
+            & span {
+                @include textos($color-gold,2rem,none);
+                font-weight: bold;
+            }
+    
+            &:hover {
+                letter-spacing: 1.4px;
+                transform: scale(1) rotate(0deg);
+                box-shadow: 0px 0px 10px 3px #1b1b1bb8;
+                background-color: #080808f3;
+            }
+        }
+    }
+
+    .galeria__title {
+        font-size: 3rem;
+    }
+    .galeria__container {
+        width: 95%;
+        max-width: auto;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: .5rem;
+
+        .galeria__box {
+            width: 100%;
+            height: 30rem;
+            &:nth-child(4) {
+                grid-column-start: span 1;
+            }
+
+            &:nth-child(9) {
+                grid-column-start: span 1;
+            }
+
+            & figure {
+                object-fit: cover;
+            }
         }
     }
 

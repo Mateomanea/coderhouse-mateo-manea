@@ -10,8 +10,8 @@ html {
 
 body {
   width: 100%;
-  background-color: var(--bg-cream);
-  font-family: var(--font-principal);
+  background-color: #fff0e6;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
@@ -32,7 +32,6 @@ ol {
   width: 12rem;
 }
 
-/* COMIENZO INDEX */
 .contacto__title, .galeria__title, .estudio h1, .equipo__title, .docta__title {
   font-size: 4.3rem;
   font-weight: bold;
@@ -722,7 +721,70 @@ main {
 }
 
 /* COMIENZO MEDIA QUERYS */
+/* NO PUEDO SOLUCIONAR ESPACIO EN BLANCO A LA DERECHA ENTRE
+min-width: 852px and max-width: 1200px*/
 @media screen and (max-width: 850px) {
+  /* MEDIA INDEX VIDEO */
+  .video {
+    border: 1px solid red;
+    height: 13rem;
+  }
+  .arrow {
+    display: none;
+  }
+  /* SECTION DOCTA */
+  .docta {
+    height: 100vh;
+  }
+  .docta__p {
+    width: 98%;
+    line-height: 2.9rem;
+  }
+  .docta__btn {
+    margin-top: 3rem;
+  }
+  .docta__btn:hover {
+    letter-spacing: 1px;
+    transform: none;
+    box-shadow: 0px 0px 15px 3px rgba(27, 27, 27, 0.7215686275);
+    background-color: rgba(8, 8, 8, 0.9529411765);
+  }
+  /* SECTION PASOS */
+  .pasos__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .pasos__div {
+    width: 85%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pasos__div span {
+    font-family: "Fraunces", serif;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 20px #e6b75d;
+  }
+  .pasos__div h3 {
+    color: #e6b75d;
+    font-size: 1.9rem;
+    text-transform: none;
+    letter-spacing: 1.4px;
+  }
+  .pasos__div p {
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding: 0rem;
+  }
+  /* MEDIA HEADER */
   .header__img {
     height: 15rem;
   }
@@ -739,6 +801,7 @@ main {
     background: rgba(0, 0, 0, 0.55);
     box-shadow: none;
   }
+  /* FIN MEDIA HEADER */
   /* MEDIA GALERIA */
   .galeria__container {
     width: 95%;
@@ -753,15 +816,6 @@ main {
     grid-column-start: span 1;
   }
   /* FIN MEDIA GALERIA */
-  .footer__logo {
-    display: none;
-  }
-  .footer p {
-    font-size: 1.5rem;
-  }
-  .footer__redes {
-    display: none;
-  }
   /* MEDIA ESTUDIO */
   .estudio {
     max-width: 100%;
@@ -773,6 +827,18 @@ main {
     height: 30rem;
     margin: 0 auto;
   }
+  /* FIN ESTUDIO */
+  /* MEDIA FOOTER */
+  .footer__logo {
+    display: none;
+  }
+  .footer p {
+    font-size: 1.5rem;
+  }
+  .footer__redes {
+    display: none;
+  }
+  /* FIN MEDIA FOOTER */
 }
 @media screen and (max-width: 800px) {
   .header__nav,
@@ -838,12 +904,69 @@ main {
   }
 }
 @media screen and (max-width: 500px) {
-  .galeria__container {
-    width: 90%;
-    grid-template-columns: repeat(1, 1fr);
+  /* SECTION DOCTA */
+  .docta {
+    height: 100vh;
   }
-  .galeria__container .galeria__box img {
-    height: 20rem;
+  .docta__title {
+    font-size: 3rem;
+  }
+  .docta__subtitle {
+    font-size: 2.5rem;
+  }
+  .docta__p {
+    font-size: 2rem;
+    width: 98%;
+    line-height: 2.9rem;
+  }
+  .docta__btn {
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 0rem;
+    padding: 1rem 3rem;
+    background-color: #1b1b1b;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 700;
+    border: 1px solid #444444;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1.4px;
+    cursor: pointer;
+  }
+  .docta__btn span {
+    color: #e6b75d;
+    font-size: 2rem;
+    text-transform: none;
+    font-weight: bold;
+  }
+  .docta__btn:hover {
+    letter-spacing: 1.4px;
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0px 0px 10px 3px rgba(27, 27, 27, 0.7215686275);
+    background-color: rgba(8, 8, 8, 0.9529411765);
+  }
+  .galeria__title {
+    font-size: 3rem;
+  }
+  .galeria__container {
+    width: 95%;
+    max-width: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
+  }
+  .galeria__container .galeria__box {
+    width: 100%;
+    height: 30rem;
+  }
+  .galeria__container .galeria__box:nth-child(4) {
+    grid-column-start: span 1;
+  }
+  .galeria__container .galeria__box:nth-child(9) {
+    grid-column-start: span 1;
+  }
+  .galeria__container .galeria__box figure {
+    object-fit: cover;
   }
   /* MEDIA ESTUDIO */
   .estudio {
