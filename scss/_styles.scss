@@ -362,11 +362,11 @@ main {
     }
 
     &__form {
-        width: 70%;
+        width: 90%;
         background-color: $bg-gray;
         display: flex;
         justify-content: space-around;
-        margin-bottom: 3rem;
+        margin: 3rem 0;
 
         & .formLeft {
             width: 50%;

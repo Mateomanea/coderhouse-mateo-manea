@@ -3,6 +3,26 @@
 /* NO PUEDO SOLUCIONAR ESPACIO EN BLANCO A LA DERECHA ENTRE
 min-width: 852px and max-width: 1200px*/
 
+@media screen and (max-width: 980px) {
+    .equipo {
+
+        &__cards {
+            max-width: 100%;
+            margin: 3rem auto; 
+        }
+    
+        .card {
+            width: 24rem;
+            height: 29rem;
+            border-radius: 4px;
+    
+            &__imgContainer {
+                height: 17rem;
+            }
+            }
+        }
+}
+
 @media screen and (max-width: 850px) {
 
     /* MEDIA INDEX VIDEO */
@@ -66,7 +86,7 @@ min-width: 852px and max-width: 1200px*/
             padding: 0rem;
         }
     }
-    /* MEDIA HEADER */
+    /* HEADER */
 
     .header__img {
         height: 15rem;
@@ -86,9 +106,9 @@ min-width: 852px and max-width: 1200px*/
         box-shadow: none;
     }
 
-    /* FIN MEDIA HEADER */
+    /* FIN HEADER */
 
-    /* MEDIA GALERIA */
+    /* GALERIA */
 
     .galeria__container {
         width: 95%;
@@ -104,10 +124,8 @@ min-width: 852px and max-width: 1200px*/
             }
         }
     }
-
-    /* FIN MEDIA GALERIA */
     
-    /* MEDIA ESTUDIO */
+    /* ESTUDIO */
 
     .estudio {
         max-width: 100%;
@@ -121,7 +139,17 @@ min-width: 852px and max-width: 1200px*/
         }
     }
 
-    /* FIN ESTUDIO */
+    /* CONTACTO */
+
+    .contacto {
+        &__form {
+            width: 97%;
+            background-color: $bg-gray;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 2rem 0;
+        }
+    }
 
     /* MEDIA FOOTER */
     .footer__logo {
@@ -180,12 +208,55 @@ min-width: 852px and max-width: 1200px*/
         height: 12rem;
         background: rgba(0, 0, 0, 0.55); 
         box-shadow: none;
-}
+    }
+
+    /* ARTISTAS */
+
+    .equipo {
+
+        &__cards {
+            max-width: 100%;
+            margin: 3rem auto; 
+        }
+    
+        .card {
+            width: 22rem;
+            height: 28rem;
+            border-radius: 4px;
+    
+            &__imgContainer {
+                height: 15  rem;
+            }
+        }
+    }
 
 }
 
 @media screen and (max-width: 750px) {
+    /* ARTISTAS */
+    .equipo {
 
+        &__cards {
+            max-width: 100%;
+            margin: 1rem auto;
+            @include flex (flex, column, center, space-around);
+            padding: 0rem;
+        }
+    
+        .card {
+            width: 27rem;
+            height: 30rem;
+            margin: 1rem 0;
+            box-shadow: 10px 10px 3px 0px #000000c7;
+    
+            &__imgContainer {
+                width: 100%;
+                height: 19rem;
+            }
+        }
+    }
+
+    /* ESTUDIO */
     .estudio {
         max-width: 95%;
 
@@ -199,6 +270,42 @@ min-width: 852px and max-width: 1200px*/
 } 
 
 @media screen and (max-width: 700px) {
+    /* CONTACTO */
+    .contacto {
+    
+        &__title {
+            margin: 2rem 0;
+        }
+    
+        &__form {
+            width: 95%;
+            background-color: $bg-gray;
+            @include flex(flex,column,center,center);
+            margin: 2rem 0;
+    
+            & .formLeft {
+                width: 100%;
+            }
+
+            & .formRight {
+                width: 100%;
+                & div {
+                    width: 80%;
+                }
+            }
+        }
+
+        /* FAQS */
+        &__acordeon {
+            width: 100%;
+
+            & .acordeon {
+                width: 80%;
+            }
+        }
+    }   
+    /* FOOTER */
+
     .footer__logo {
         display: none;
     }
@@ -218,6 +325,25 @@ min-width: 852px and max-width: 1200px*/
 }
 
 @media screen and (max-width: 500px) {
+    /* ARTISTAS */
+
+    .equipo {
+        width: 100%;
+        background-color: $bg-gray;
+        color: $bg-cream;
+        text-align: center;
+    
+        &__title {
+            @extend %titleStyles;
+        }
+    
+        &__descripcion {
+            padding: 1rem .2rem;
+            max-width: 100%;
+            font-weight: 300;
+            line-height: 30px;
+        }
+    }
 
     /* SECTION DOCTA */
     .docta {

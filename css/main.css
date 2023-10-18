@@ -482,11 +482,11 @@ main {
   margin-bottom: 5rem;
 }
 .contacto__form {
-  width: 70%;
+  width: 90%;
   background-color: #141414;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 .contacto__form .formLeft {
   width: 50%;
@@ -723,6 +723,20 @@ main {
 /* COMIENZO MEDIA QUERYS */
 /* NO PUEDO SOLUCIONAR ESPACIO EN BLANCO A LA DERECHA ENTRE
 min-width: 852px and max-width: 1200px*/
+@media screen and (max-width: 980px) {
+  .equipo__cards {
+    max-width: 100%;
+    margin: 3rem auto;
+  }
+  .equipo .card {
+    width: 24rem;
+    height: 29rem;
+    border-radius: 4px;
+  }
+  .equipo .card__imgContainer {
+    height: 17rem;
+  }
+}
 @media screen and (max-width: 850px) {
   /* MEDIA INDEX VIDEO */
   .video {
@@ -784,7 +798,7 @@ min-width: 852px and max-width: 1200px*/
     font-weight: 300;
     padding: 0rem;
   }
-  /* MEDIA HEADER */
+  /* HEADER */
   .header__img {
     height: 15rem;
   }
@@ -801,8 +815,8 @@ min-width: 852px and max-width: 1200px*/
     background: rgba(0, 0, 0, 0.55);
     box-shadow: none;
   }
-  /* FIN MEDIA HEADER */
-  /* MEDIA GALERIA */
+  /* FIN HEADER */
+  /* GALERIA */
   .galeria__container {
     width: 95%;
     max-width: auto;
@@ -815,8 +829,7 @@ min-width: 852px and max-width: 1200px*/
   .galeria__container .galeria__box:nth-child(4) {
     grid-column-start: span 1;
   }
-  /* FIN MEDIA GALERIA */
-  /* MEDIA ESTUDIO */
+  /* ESTUDIO */
   .estudio {
     max-width: 100%;
     margin: 0 auto;
@@ -827,7 +840,14 @@ min-width: 852px and max-width: 1200px*/
     height: 30rem;
     margin: 0 auto;
   }
-  /* FIN ESTUDIO */
+  /* CONTACTO */
+  .contacto__form {
+    width: 97%;
+    background-color: #141414;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+  }
   /* MEDIA FOOTER */
   .footer__logo {
     display: none;
@@ -877,8 +897,42 @@ min-width: 852px and max-width: 1200px*/
     background: rgba(0, 0, 0, 0.55);
     box-shadow: none;
   }
+  /* ARTISTAS */
+  .equipo__cards {
+    max-width: 100%;
+    margin: 3rem auto;
+  }
+  .equipo .card {
+    width: 22rem;
+    height: 28rem;
+    border-radius: 4px;
+  }
+  .equipo .card__imgContainer {
+    height: 15 rem;
+  }
 }
 @media screen and (max-width: 750px) {
+  /* ARTISTAS */
+  .equipo__cards {
+    max-width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    padding: 0rem;
+  }
+  .equipo .card {
+    width: 27rem;
+    height: 30rem;
+    margin: 1rem 0;
+    box-shadow: 10px 10px 3px 0px rgba(0, 0, 0, 0.7803921569);
+  }
+  .equipo .card__imgContainer {
+    width: 100%;
+    height: 19rem;
+  }
+  /* ESTUDIO */
   .estudio {
     max-width: 95%;
   }
@@ -890,6 +944,38 @@ min-width: 852px and max-width: 1200px*/
   }
 }
 @media screen and (max-width: 700px) {
+  /* CONTACTO */
+  .contacto {
+    /* FAQS */
+  }
+  .contacto__title {
+    margin: 2rem 0;
+  }
+  .contacto__form {
+    width: 95%;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  .contacto__form .formLeft {
+    width: 100%;
+  }
+  .contacto__form .formRight {
+    width: 100%;
+  }
+  .contacto__form .formRight div {
+    width: 80%;
+  }
+  .contacto__acordeon {
+    width: 100%;
+  }
+  .contacto__acordeon .acordeon {
+    width: 80%;
+  }
+  /* FOOTER */
   .footer__logo {
     display: none;
   }
@@ -904,6 +990,19 @@ min-width: 852px and max-width: 1200px*/
   }
 }
 @media screen and (max-width: 500px) {
+  /* ARTISTAS */
+  .equipo {
+    width: 100%;
+    background-color: #141414;
+    color: #fff0e6;
+    text-align: center;
+  }
+  .equipo__descripcion {
+    padding: 1rem 0.2rem;
+    max-width: 100%;
+    font-weight: 300;
+    line-height: 30px;
+  }
   /* SECTION DOCTA */
   .docta {
     height: 100vh;
