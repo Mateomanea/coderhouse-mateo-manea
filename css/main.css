@@ -474,7 +474,6 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* FAQS */
 }
 .contacto__title {
   color: #fff0e6;
@@ -945,9 +944,6 @@ min-width: 852px and max-width: 1200px*/
 }
 @media screen and (max-width: 700px) {
   /* CONTACTO */
-  .contacto {
-    /* FAQS */
-  }
   .contacto__title {
     margin: 2rem 0;
   }
