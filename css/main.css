@@ -1136,6 +1136,74 @@ min-width: 852px and max-width: 1200px*/
     height: 25rem;
   }
 }
+@media screen and (max-width: 450px) {
+  .docta {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .docta__p {
+    width: 90%;
+    line-height: 2.4rem;
+    padding: 3rem 0;
+  }
+  .docta__btn {
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    padding: 1.5rem 3rem;
+  }
+  .docta__btn span {
+    color: #e6b75d;
+    font-size: 2rem;
+    text-transform: none;
+    font-weight: bold;
+  }
+  .docta__btn:hover {
+    letter-spacing: 3px;
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0px 0px 15px 3px rgba(27, 27, 27, 0.7960784314);
+    background-color: rgba(8, 8, 8, 0.9529411765);
+  }
+  .pasos__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .pasos__div {
+    width: 90%;
+    height: 70rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pasos__div span {
+    font-size: 5rem;
+  }
+  .pasos__div h3 {
+    color: #e6b75d;
+    font-size: 2rem;
+    text-transform: none;
+    letter-spacing: 1.4px;
+  }
+  .pasos__div p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    line-height: 22px;
+  }
+  .footer__bottom {
+    display: none;
+  }
+}
 /* FIN MEDIA QUERYS */
 
 /*# sourceMappingURL=main.css.map */

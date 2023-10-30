@@ -477,4 +477,72 @@ min-width: 852px and max-width: 1200px*/
     }
 }
 
+@media screen and (max-width: 450px) {
+
+    .docta {
+        height: 100%;
+        @include flex(flex, column, center, center);
+    
+        &__p {
+            width: 90%;
+            line-height: 2.4rem;
+            padding: 3rem 0;
+        }
+    
+        &__btn {
+            @include textos($color-white, 1.6rem, uppercase);
+            margin: 2rem 0;
+            padding: 1.5rem 3rem;
+    
+            & span {
+                @include textos($color-gold,2rem,none);
+                font-weight: bold;
+            }
+    
+            &:hover {
+                letter-spacing: 3px;
+                transform: scale(1.1) rotate(2deg);
+                box-shadow: 0px 0px 15px 3px #1b1b1bcb;
+                background-color: #080808f3;
+            }
+        }
+    }
+    
+
+    .pasos {
+    
+        &__container {
+            width: 100%;
+            height: 100%;
+            @include flex(flex,column,space-evenly,center);
+        }
+    
+        &__div {
+            width: 90%;
+            height: 70rem;
+            text-align: center;
+            @include flex(flex,column,center,center);
+            & span {
+                font-size: 5rem;
+            }
+    
+            & h3 {
+                @include textos($color-gold,2rem,none);
+                letter-spacing: 1.4px;
+            }
+    
+            & p {
+                font-size: 1.8rem;
+                font-weight: 300;
+                padding: .5rem;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .footer__bottom{
+        display: none;
+    }
+}
+
 /* FIN MEDIA QUERYS */
