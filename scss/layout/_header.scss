@@ -22,11 +22,6 @@ header {
         text-shadow: 2px 2px 3px #000;
         position: relative;
 
-        &:hover{
-            transition: color .4s ease-out;
-            color: $color-gold;
-        }
-
         &::after {
             content: "";
             position: absolute;
@@ -39,9 +34,14 @@ header {
             transform: translateX(-50%);
             transition: width .3s ease-in-out;
         }
-
-        &:hover::after {
-            width: 70%;
+        
+        &:hover{
+            transition: color .4s ease-out;
+            color: $color-gold;
+            
+            &::after {
+                width: 70%;
+            }
         }
     }
 }
