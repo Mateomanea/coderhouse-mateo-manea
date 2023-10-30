@@ -1,18 +1,1141 @@
-/* Error: expected selector.
- *     ,
- * 488 |     }
- *     |      ^
- *     '
- *   scss\layout\_styles.scss 488:6  @import
- *   scss\main.scss 8:9              root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected selector.\a     \2577 \a 488 \2502      }\d\a     \2502       ^\a     \2575 \a   scss\\layout\\_styles.scss 488:6  @import\a   scss\\main.scss 8:9              root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,400;1,9..144,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  background-color: #fff0e6;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-size: 2.6rem;
+  letter-spacing: 1.12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+#logoDocta {
+  width: 12rem;
+}
+
+.contacto__title, .galeria__title, .estudio h1, .equipo__title, .docta__title {
+  font-size: 4.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 4px solid #e6b75d;
+  padding: 1rem 0;
+  border-radius: 5%;
+  display: inline-block;
+}
+
+.header__imgArtistas::after,
+.header__imgGaleria::after,
+.header__imgEstudio::after,
+.header__imgContacto::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30rem;
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.5450980392);
+}
+
+.footer h3, .header__redes ul li, .header__nav ul li {
+  display: inline;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 13rem;
+  background: none;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+}
+
+/* HEADER INDEX */
+.header__nav ul li a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  letter-spacing: 1.3px;
+  padding: 0.5rem 1.2rem;
+  text-shadow: 2px 2px 3px #000;
+  position: relative;
+}
+.header__nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.7px;
+  background-color: #e6b75d;
+  bottom: 4px;
+  left: 50%;
+  box-shadow: 0px 1px 5px 0px #e6b75d;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+.header__nav ul li a:hover {
+  transition: color 0.4s ease-out;
+  color: #e6b75d;
+}
+.header__nav ul li a:hover::after {
+  width: 70%;
+}
+
+#menu {
+  display: none;
+}
+
+.header__label {
+  display: none;
+}
+
+.header__redes i {
+  color: #fff;
+  font-size: 1.9rem;
+  text-transform: none;
+  margin-left: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.header__redes i:hover {
+  color: #e6b75d;
+  transform: scale(1.2);
+}
+
+/* FIN HEADER INDEX */
+/* HEADER PAGES */
+.header__img {
+  width: 100%;
+  height: 30rem;
+  background-size: cover;
+  z-index: -50;
+}
+
+.header__imgArtistas,
+.header__imgGaleria,
+.header__imgContacto {
+  background-image: url(../../assets/img/backgrounds/background-maquina-l.webp);
+  background-repeat: no-repeat;
+  background-position: center 75%;
+  background-size: cover;
+}
+
+.header__imgEstudio {
+  background-image: url(../../assets/img/img-estudio-artistas/estudio.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* FIN HEADER PAGES */
+/* COMIENZO INDEX */
+/* BACKGROUND VIDEO */
+.video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  overflow: hidden;
+}
+.video__mp4 {
+  width: 100%;
+  filter: brightness(0.5);
+}
+
+.arrow {
+  position: absolute;
+  top: 94%;
+  left: 50%;
+}
+.arrow__icon {
+  color: rgba(217, 217, 217, 0.7803921569);
+  font-size: 3rem;
+  text-transform: none;
+  text-shadow: 0px -4px 3px #000;
+  transition: all 0.3s ease-in-out;
+}
+.arrow:hover .arrow__icon {
+  transform: scale(1.2);
+}
+
+/* FIN BACKGROUND VIDEO */
+/* MAIN */
+main {
+  width: 100%;
+  margin: 0 auto;
+  color: #444444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FIN MAIN */
+/* SECTION DOCTA */
+.docta {
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.docta__subtitle {
+  font-size: 3.3rem;
+  font-weight: 400;
+  color: #676767;
+}
+.docta__p {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 3.5rem;
+  padding: 3rem 0;
+}
+.docta__btn {
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-top: 6rem;
+  padding: 2rem 5rem;
+  background-color: #1b1b1b;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  border: 1px solid #444444;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.docta__btn span {
+  color: #e6b75d;
+  font-size: 2rem;
+  text-transform: none;
+  font-weight: bold;
+}
+.docta__btn:hover {
+  letter-spacing: 3px;
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0px 0px 15px 3px rgba(27, 27, 27, 0.7960784314);
+  background-color: rgba(8, 8, 8, 0.9529411765);
+}
+
+/* FIN SECTION DOCTA */
+/* SECTION PASOS */
+.pasos {
+  width: 100%;
+  height: 100vh;
+  background-color: #141414;
+  color: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.91) inset;
+}
+.pasos__container { /* 
+width: 1200px; */
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pasos__div {
+  width: 350px;
+  height: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pasos__div span {
+  font-family: "Fraunces", serif;
+  font-size: 10rem;
+  padding-bottom: 1rem;
+  text-shadow: 3px 3px 20px #e6b75d;
+}
+.pasos__div h3 {
+  color: #e6b75d;
+  font-size: 2.5rem;
+  text-transform: none;
+  letter-spacing: 1.4px;
+}
+.pasos__div p {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1.4rem;
+}
+
+/* FIN SECTION PASOS */
+/* FIN INDEX */
+/* COMIENZO ARTISTAS */
+/* SECTION EQUIPO */
+.equipo {
+  width: 100%;
+  background-color: #141414;
+  color: #fff0e6;
+  text-align: center;
+}
+.equipo__descripcion {
+  padding: 2rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 34px;
+}
+.equipo__cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 3rem;
+}
+.equipo .card {
+  width: 30rem;
+  height: 33rem;
+  display: flex;
+  flex-direction: column;
+  background: #080808 !important;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 0px #000000;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.equipo .card:hover {
+  box-shadow: 10px 10px 30px 2px #000000;
+}
+.equipo .card__imgContainer {
+  width: 100%;
+  height: 20rem;
+  display: block;
+  overflow: hidden;
+}
+.equipo .card__imgContainer img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+.equipo .card__datos {
+  text-align: center;
+  overflow: hidden;
+}
+.equipo .card__datos--nombre {
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: none;
+  font-weight: bold;
+  margin: 0;
+}
+.equipo .card__datos--estilos {
+  color: #e6b75d;
+  font-size: 1.3rem;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+}
+.equipo .card__redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.equipo .card__redes li {
+  font-size: 2.2rem;
+  padding: 0.5rem;
+}
+.equipo .card__redes li a {
+  color: #fff0e6;
+  padding: 1rem;
+}
+.equipo .card__redes li a:hover {
+  transition: all 0.2s ease-in;
+  text-shadow: 0px 0px 10px #e6b75d;
+}
+
+/* FIN ARTISTAS */
+/* FIN SECTION EQUIPO */
+/* COMIENZO ESTUDIO */
+.estudio {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.estudio h1 {
+  margin: 5rem 0;
+}
+.estudio p {
+  color: #444444;
+  padding: 2rem 5rem;
+  font-weight: 400;
+  line-height: 34px;
+}
+.estudio__carousel {
+  width: 70%;
+  height: 40rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.7529411765);
+  border-radius: 10px;
+}
+
+/* FIN ESTUDIO */
+/* COMIENZO GALERIA */
+.galeria {
+  width: 100%;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  flex-wrap: wrap;
+}
+.galeria__title {
+  color: #fff0e6;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.galeria__container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 25rem;
+  grid-gap: 1.5rem;
+}
+.galeria__container .galeria__box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.galeria__container .galeria__box figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.galeria__container .galeria__box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.galeria__container .galeria__box:nth-child(4) {
+  grid-column-start: span 2;
+}
+.galeria__container .galeria__box:nth-child(9) {
+  grid-column-start: span 2;
+}
+.galeria__container .galeria__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+.galeria__container .galeria__box:hover::before {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* FIN GALERIA */
+/* COMIENZO CONTACTO */
+.contacto {
+  width: 100%;
+  height: auto;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contacto__title {
+  color: #fff0e6;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.contacto__form {
+  width: 90%;
+  background-color: #141414;
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem 0;
+}
+.contacto__form .formLeft {
+  width: 50%;
+  color: #fff0e6;
+}
+.contacto__form .formLeft p {
+  text-align: center;
+}
+.contacto__form .formLeft p:first-child {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e6b75d;
+}
+.contacto__form .formLeft p:nth-child(2) {
+  font-size: 2rem;
+  padding: 1rem 0;
+  font-weight: 300;
+}
+.contacto__form .formLeft__redes {
+  width: 100%;
+  padding: 1rem;
+}
+.contacto__form .formLeft__redes ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contacto__form .formLeft__redes ul a {
+  padding: 0.5rem 1.5rem;
+  color: #fff0e6;
+  font-size: 3rem;
+  text-transform: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.contacto__form .formLeft__redes ul a:hover {
+  transition: all 0.3s ease-in-out;
+  color: #080808;
+  text-shadow: 0px 0px 20px #e6b75d;
+}
+.contacto__form .formRight {
+  width: 50%;
+  color: #fff0e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto__form .formRight div {
+  width: 70%;
+}
+.contacto__form .formRight div label {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.contacto__form .formRight div input, .contacto__form .formRight div textarea {
+  width: 100%;
+  height: 3rem;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: none;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #e6b75d;
+  border-radius: 5px;
+  background-color: #080808;
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+}
+.contacto__form .formRight div textarea {
+  height: 10rem;
+  font-size: 1.2rem;
+  line-height: 15px;
+}
+.contacto__form .formRight div #check {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 1.2rem 1rem;
+}
+.contacto__form .formRight div:nth-child(4) {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contacto__form .formRight div:nth-child(6) {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contacto__form .formRight div button {
+  width: 20rem;
+  height: 4rem;
+  color: #c0a362;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  border: 2px solid #c1a362;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #080808;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+.contacto__form .formRight div button:hover {
+  box-shadow: 0 0 10px rgba(230, 182, 93, 0.7725490196);
+}
+.contacto__form .formRight div button:active {
+  scale: 1.2;
+}
+.contacto__acordeon {
+  width: 700px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+.contacto__acordeon .acordeon {
+  width: 700px;
+  padding: 2rem 0;
+}
+.contacto__acordeon .acordeon .accordion-item {
+  margin-bottom: 1rem;
+}
+.contacto__acordeon .acordeon .accordion-body {
+  border: 2px solid #e6b75d;
+  color: #fff;
+  background-color: #080808;
+  box-shadow: 0px 0px 30px 1px #676767;
+}
+.contacto__acordeon .acordeon .accordion-body p {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 1.1px;
+}
+.contacto__acordeon .acordeon .accordion-button {
+  border: 2px solid #e6b75d;
+  color: #e6b75d;
+  background-color: #000;
+}
+.contacto__acordeon .acordeon .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.contacto__acordeon h2 {
+  color: #fff0e6;
+  font-size: 4.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 4px solid #e6b75d;
+  border-radius: 5%;
+  display: inline-block;
+}
+
+/* FIN FAQS */
+/* FIN CONTACTO */
+/* FOOTER */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  color: #fff;
+}
+.footer h3 {
+  font-size: 2rem;
+  border-bottom: 2px solid #e6b75d;
+  border-radius: 7%;
+}
+.footer p {
+  font-size: 1.6rem;
+}
+.footer ul {
+  padding: 1rem 0;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background-color: #080808;
+}
+.footer__info ul li {
+  display: flex;
+  align-items: center;
+}
+.footer__info ul li i {
+  color: #e6b75d;
+  font-size: 1.6rem;
+  text-transform: none;
+  padding: 0.8rem;
+}
+.footer__horarios li {
+  font-size: 1.6rem;
+  letter-spacing: 1.12px;
+}
+.footer__redes ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__redes ul i {
+  font-size: 1.8rem;
+  color: #fff0e6;
+  transition: all 0.4s ease-in-out;
+}
+.footer__redes ul i:hover {
+  color: #e6b75d;
+}
+.footer__bottom {
+  width: 100%;
+  height: 4rem;
+  background-color: #141414;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 0 2rem;
+}
+.footer__bottom p {
+  color: #fff0e6;
+  padding: 0 0.3rem;
+}
+.footer__bottom p a {
+  color: #e6b75d;
+}
+.footer__bottom p a:hover {
+  text-shadow: 0px 0px 7px #e6b75d;
+}
+
+/* COMIENZO MEDIA QUERYS */
+/* NO PUEDO SOLUCIONAR ESPACIO EN BLANCO A LA DERECHA ENTRE
+min-width: 852px and max-width: 1200px*/
+@media screen and (max-width: 980px) {
+  .equipo__cards {
+    max-width: 100%;
+    margin: 3rem auto;
+  }
+  .equipo .card {
+    width: 24rem;
+    height: 29rem;
+    border-radius: 4px;
+  }
+  .equipo .card__imgContainer {
+    height: 17rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  /* MEDIA INDEX VIDEO */
+  .video {
+    height: 13rem;
+  }
+  .arrow {
+    display: none;
+  }
+  /* SECTION DOCTA */
+  .docta {
+    height: 100vh;
+  }
+  .docta__p {
+    width: 98%;
+    line-height: 2.9rem;
+  }
+  .docta__btn {
+    margin-top: 3rem;
+  }
+  .docta__btn:hover {
+    letter-spacing: 1px;
+    transform: none;
+    box-shadow: 0px 0px 15px 3px rgba(27, 27, 27, 0.7215686275);
+    background-color: rgba(8, 8, 8, 0.9529411765);
+  }
+  /* SECTION PASOS */
+  .pasos__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .pasos__div {
+    width: 85%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pasos__div span {
+    font-family: "Fraunces", serif;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 20px #e6b75d;
+  }
+  .pasos__div h3 {
+    color: #e6b75d;
+    font-size: 1.9rem;
+    text-transform: none;
+    letter-spacing: 1.4px;
+  }
+  .pasos__div p {
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding: 0rem;
+  }
+  /* HEADER */
+  .header__img {
+    height: 15rem;
+  }
+  .header__imgArtistas::after,
+  .header__imgGaleria::after,
+  .header__imgEstudio::after,
+  .header__imgContacto::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15rem;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: none;
+  }
+  /* FIN HEADER */
+  /* GALERIA */
+  .galeria__container {
+    width: 95%;
+    max-width: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
+  }
+  .galeria__container .galeria__box {
+    width: 100%;
+  }
+  .galeria__container .galeria__box:nth-child(4) {
+    grid-column-start: span 1;
+  }
+  /* ESTUDIO */
+  .estudio {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .estudio .estudio__carousel {
+    width: 90%;
+    height: 30rem;
+    margin: 0 auto;
+  }
+  /* CONTACTO */
+  .contacto__form {
+    width: 97%;
+    background-color: #141414;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+  }
+  /* MEDIA FOOTER */
+  .footer__logo {
+    display: none;
+  }
+  .footer p {
+    font-size: 1.5rem;
+  }
+  .footer__redes {
+    display: none;
+  }
+  /* FIN MEDIA FOOTER */
+}
+@media screen and (max-width: 800px) {
+  .header__nav,
+  .header__redes {
+    display: none;
+  }
+  .header__img {
+    position: relative;
+    height: 12rem;
+  }
+  .header__label {
+    display: block;
+    padding: 0.5rem;
+    position: absolute;
+    right: 2rem;
+  }
+  .header__label-icon {
+    color: #e6b75d;
+    font-size: 3rem;
+    text-transform: none;
+  }
+  .header__input:checked + .header__nav {
+    position: absolute;
+    display: block;
+    top: 12rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9294117647);
+    border-radius: 0 0 3rem 3rem;
+  }
+  .header__input:checked + .header__nav ul {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .header__input:checked + .header__nav ul li {
+    border-top: 3px solid #e6b75d;
+    width: 50%;
+    text-align: center;
+    padding: 2rem;
+  }
+  .header__input:checked + .header__nav ul li:nth-child(1) {
+    border: none;
+  }
+  .header__input:checked + .header__nav ul li a {
+    color: #e6b75d;
+    font-size: 2.5rem;
+    text-transform: none;
+  }
+  #logoDocta {
+    width: 10rem;
+    position: relative;
+    transform: translateY(-10px);
+  }
+  .header__imgArtistas::after,
+  .header__imgGaleria::after,
+  .header__imgEstudio::after,
+  .header__imgContacto::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12rem;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: none;
+  }
+  /* ARTISTAS */
+  .equipo__cards {
+    max-width: 100%;
+    margin: 3rem auto;
+  }
+  .equipo .card {
+    width: 22rem;
+    height: 28rem;
+    border-radius: 4px;
+  }
+  .equipo .card__imgContainer {
+    height: 15 rem;
+  }
+  .equipo .card__datos--estilos {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  /* ARTISTAS */
+  .equipo__cards {
+    max-width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+    padding: 0rem;
+  }
+  .equipo .card {
+    width: 27rem;
+    height: 30rem;
+    margin: 1rem 0;
+    box-shadow: 10px 10px 3px 0px rgba(0, 0, 0, 0.7803921569);
+  }
+  .equipo .card__imgContainer {
+    width: 100%;
+    height: 19rem;
+  }
+  /* ESTUDIO */
+  .estudio {
+    max-width: 95%;
+  }
+  .estudio p {
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* CONTACTO */
+  .contacto__title {
+    margin: 2rem 0;
+  }
+  .contacto__form {
+    width: 95%;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  .contacto__form .formLeft {
+    width: 100%;
+  }
+  .contacto__form .formRight {
+    width: 100%;
+  }
+  .contacto__form .formRight div {
+    width: 80%;
+  }
+  .contacto__acordeon {
+    width: 100%;
+  }
+  .contacto__acordeon .acordeon {
+    width: 80%;
+  }
+  /* FOOTER */
+  .footer__logo {
+    display: none;
+  }
+  .footer__info {
+    display: none;
+  }
+  .footer p {
+    font-size: 1rem;
+  }
+  .footer__redes {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* ARTISTAS */
+  .equipo {
+    width: 100%;
+    background-color: #141414;
+    color: #fff0e6;
+    text-align: center;
+  }
+  .equipo__descripcion {
+    padding: 1rem 0.2rem;
+    max-width: 100%;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  /* SECTION DOCTA */
+  .docta {
+    height: 100vh;
+  }
+  .docta__title {
+    font-size: 3rem;
+  }
+  .docta__subtitle {
+    font-size: 2.5rem;
+  }
+  .docta__p {
+    font-size: 2rem;
+    width: 98%;
+    line-height: 2.9rem;
+  }
+  .docta__btn {
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 0rem;
+    padding: 1rem 3rem;
+    background-color: #1b1b1b;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 700;
+    border: 1px solid #444444;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1.4px;
+    cursor: pointer;
+  }
+  .docta__btn span {
+    color: #e6b75d;
+    font-size: 2rem;
+    text-transform: none;
+    font-weight: bold;
+  }
+  .docta__btn:hover {
+    letter-spacing: 1.4px;
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0px 0px 10px 3px rgba(27, 27, 27, 0.7215686275);
+    background-color: rgba(8, 8, 8, 0.9529411765);
+  }
+  .galeria__title {
+    font-size: 3rem;
+  }
+  .galeria__container {
+    width: 95%;
+    max-width: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
+  }
+  .galeria__container .galeria__box {
+    width: 100%;
+    height: 30rem;
+  }
+  .galeria__container .galeria__box:nth-child(4) {
+    grid-column-start: span 1;
+  }
+  .galeria__container .galeria__box:nth-child(9) {
+    grid-column-start: span 1;
+  }
+  .galeria__container .galeria__box figure {
+    object-fit: cover;
+  }
+  /* MEDIA ESTUDIO */
+  .estudio {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .estudio h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 5%;
+    display: inline-block;
+  }
+  .estudio p {
+    color: #444444;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .estudio .estudio__carousel {
+    width: 90%;
+    height: 25rem;
+  }
+}
+/* FIN MEDIA QUERYS */
+
+/*# sourceMappingURL=main.css.map */

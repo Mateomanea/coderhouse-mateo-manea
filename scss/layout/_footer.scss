@@ -58,13 +58,11 @@
         }
     }
 
-    &__bottom  {
+    &__bottom  { 
         width: 100%;
-        height: 3rem;
+        height: 4rem;
         background-color: #141414;
-        display: flex;
-        justify-content: end;
-        align-items: center;
+        @include flex (flex, row, end, center);
         padding: 0 2rem;
 
         & p {
