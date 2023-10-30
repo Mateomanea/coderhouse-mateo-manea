@@ -1,7 +1,11 @@
-@import "variables";
-@import "base";
-@import "header";
-@import "styles";
-@import "footer";
-@import "mediasQuerys";
+
+@import "utilities/variables";
+@import "base/reset";
+@import "utilities/mixins";
+@import "utilities/extend";
+
+@import "layout/header";
+@import "layout/styles";
+@import "layout/footer";
+@import "layout/medias-queries";
 

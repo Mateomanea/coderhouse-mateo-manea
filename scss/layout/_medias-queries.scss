@@ -27,7 +27,6 @@ min-width: 852px and max-width: 1200px*/
 
     /* MEDIA INDEX VIDEO */
     .video {
-        border: 1px solid red;
         height: 13rem;
     }
 
@@ -178,17 +177,46 @@ min-width: 852px and max-width: 1200px*/
         height: 12rem;
     }
     
-    .header__toggle {
+    .header__label {
         display: block;
+        padding: .5rem;
         position: absolute;
         right: 2rem;
+        &-icon {
+            @include textos($color-gold, 3rem, none);
+        }
     }
 
-    .header__toggle a { 
-        font-size: 2.4rem;
-        color: $color-white;
-        padding: 0.5rem;
+    .header__input:checked + .header__nav {
+        position: absolute;
+        display: block;
+        top: 12rem;
+        width: 100%;
+        background: #000000ed;
+        border-radius: 0 0 3rem 3rem;
     }
+
+    .header__input:checked + .header__nav ul {
+        height: 50%;
+        @include flex(flex,column,space-evenly,center);
+
+        & li {
+            border-top: 3px solid $color-gold;
+            width: 50%;
+            text-align: center;
+            padding: 2rem;
+
+            &:nth-child(1) {
+                border: none;
+            }
+        }
+
+        & li a {
+            @include textos($color-gold,2.5rem,none)
+        }
+    }
+
+
 
     #logoDocta{
         width: 10rem;
@@ -226,6 +254,10 @@ min-width: 852px and max-width: 1200px*/
     
             &__imgContainer {
                 height: 15  rem;
+            }
+
+            &__datos--estilos {
+                padding: 1rem;
             }
         }
     }

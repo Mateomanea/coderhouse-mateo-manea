@@ -19,6 +19,11 @@
     <header class="header headerPages">
         <img class="header__logo" src="../assets/img/logo-white.png" alt="Logo Docta Tatoo" id="logoDocta">
 
+        <label for="menu" class="header__label">
+            <i class="fa-solid fa-bars header__label-icon"></i>
+        </label>
+        <input type="checkbox" id="menu" class="header__input">
+
         <nav class="header__nav">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -28,11 +33,7 @@
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
-
-        <div class="header__toggle">
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
-        </div>
-
+        
         <div class="header__redes">
             <ul>
                 <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
@@ -49,7 +50,7 @@
 
     <!-- CONTENIDO PRINCIPAL -->
 
-    <main id="main">
+    <main>
         <section class="contacto">
             <h1 class="contacto__title">Contactanos</h1>
 
@@ -112,15 +113,15 @@
                 <h2>FAQs</h2>
                 <div class="accordion acordeon" id="accordionExample">
                     <div class="accordion-item w-auto">
-                        <h3 class="accordion-header border border-warning">
+                        <h3 class="accordion-header">
                             <button class="accordion-button fs-2" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-controls="collapseOne aria-controls="collapseOne">
+                            data-bs-target="#collapseOne" aria-controls="collapseOne aria-controls="collapseOne>
                                 Hay que dejar seña?
                             </button>
                         </h3>
                         <div id="collapseOne" class="accordion-collapse collapse show"
                             data-bs-parent="#accordionExample">
-                            <div class="accordion-body border border-warning">
+                            <div class="accordion-body">
                                 <p>
                                     Para apartar una cita es necesario de dejar una seña de un 25% respecto al valor total del tatuaje. Las señas no se devuelven en caso de no acudir a la cita.
                                 </p>
@@ -128,27 +129,27 @@
                         </div>
                     </div>
                     <div class="accordion-item w-100">
-                        <h3 class="accordion-header border border-warning">
-                            <button class="accordion-button collapsed fs-2" type="button" data-bs-toggle="collapse"
+                        <h3 class="accordion-header">
+                            <button class="accordion-button fs-2" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Hacén Piercings? 
                             </button>
                         </h3>
-                        <div id="collapseTwo" class="accordion-collapse collapse w-auto" data-bs-parent="#accordionExample">
-                            <div class="accordion-body border border-warning">
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
                                 <p>No, no hacemos piercings, nuestro trabajo sólo va orientado al tattoo.</p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item w-100">
-                        <h3 class="accordion-header border border-warning">
-                            <button class="accordion-button collapsed fs-2" type="button" data-bs-toggle="collapse"
+                        <h3 class="accordion-header">
+                            <button class="accordion-button fs-2" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Usan anestesia o alguna crema para disminuir el dolor?
                             </button>
                         </h3>
-                        <div id="collapseThree" class="accordion-collapse collapse w-auto" data-bs-parent="#accordionExample">
-                            <div class="accordion-body border border-warning">
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
                                 <p> No, no disponemos, ni suministramos ningún tipo de anestesia.</p>
                             </div>
                         </div>

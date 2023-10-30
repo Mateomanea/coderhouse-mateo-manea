@@ -105,7 +105,11 @@ header {
   width: 70%;
 }
 
-.header__toggle {
+#menu {
+  display: none;
+}
+
+.header__label {
   display: none;
 }
 
@@ -133,14 +137,14 @@ header {
 .header__imgArtistas,
 .header__imgGaleria,
 .header__imgContacto {
-  background-image: url(../assets/img/backgrounds/background-maquina-l.jpg);
+  background-image: url(../../assets/img/backgrounds/background-maquina-l.webp);
   background-repeat: no-repeat;
   background-position: center 75%;
   background-size: cover;
 }
 
 .header__imgEstudio {
-  background-image: url(../assets/img/img-estudio-artistas/estudio.jpg);
+  background-image: url(../../assets/img/img-estudio-artistas/estudio.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -152,10 +156,9 @@ header {
 .video {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -100;
   overflow: hidden;
-  box-shadow: 0px 15px 70px 2px rgba(0, 0, 0, 0.8666666667);
 }
 .video__mp4 {
   width: 100%;
@@ -235,7 +238,7 @@ main {
 .docta__btn:hover {
   letter-spacing: 3px;
   transform: scale(1.1) rotate(2deg);
-  box-shadow: 0px 0px 15px 3px rgba(27, 27, 27, 0.7215686275);
+  box-shadow: 0px 0px 15px 3px rgba(27, 27, 27, 0.7960784314);
   background-color: rgba(8, 8, 8, 0.9529411765);
 }
 
@@ -248,8 +251,8 @@ main {
   color: #fff;
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.91) inset;
 }
-.pasos__container {
-  width: 1200px;
+.pasos__container { /* 
+width: 1200px; */
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -474,7 +477,6 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* FAQS */
 }
 .contacto__title {
   color: #fff0e6;
@@ -621,9 +623,10 @@ main {
   margin-bottom: 1rem;
 }
 .contacto__acordeon .acordeon .accordion-body {
+  border: 2px solid #e6b75d;
   color: #fff;
   background-color: #080808;
-  box-shadow: 0px 0px 20px 0px #676767;
+  box-shadow: 0px 0px 30px 1px #676767;
 }
 .contacto__acordeon .acordeon .accordion-body p {
   font-size: 2rem;
@@ -632,8 +635,13 @@ main {
   letter-spacing: 1.1px;
 }
 .contacto__acordeon .acordeon .accordion-button {
-  color: #e6b75d !important;
-  background-color: #000 !important;
+  border: 2px solid #e6b75d;
+  color: #e6b75d;
+  background-color: #000;
+}
+.contacto__acordeon .acordeon .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
 }
 .contacto__acordeon h2 {
   color: #fff0e6;
@@ -740,7 +748,6 @@ min-width: 852px and max-width: 1200px*/
 @media screen and (max-width: 850px) {
   /* MEDIA INDEX VIDEO */
   .video {
-    border: 1px solid red;
     height: 13rem;
   }
   .arrow {
@@ -869,15 +876,45 @@ min-width: 852px and max-width: 1200px*/
     position: relative;
     height: 12rem;
   }
-  .header__toggle {
+  .header__label {
     display: block;
+    padding: 0.5rem;
     position: absolute;
     right: 2rem;
   }
-  .header__toggle a {
-    font-size: 2.4rem;
-    color: #fff;
-    padding: 0.5rem;
+  .header__label-icon {
+    color: #e6b75d;
+    font-size: 3rem;
+    text-transform: none;
+  }
+  .header__input:checked + .header__nav {
+    position: absolute;
+    display: block;
+    top: 12rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9294117647);
+    border-radius: 0 0 3rem 3rem;
+  }
+  .header__input:checked + .header__nav ul {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .header__input:checked + .header__nav ul li {
+    border-top: 3px solid #e6b75d;
+    width: 50%;
+    text-align: center;
+    padding: 2rem;
+  }
+  .header__input:checked + .header__nav ul li:nth-child(1) {
+    border: none;
+  }
+  .header__input:checked + .header__nav ul li a {
+    color: #e6b75d;
+    font-size: 2.5rem;
+    text-transform: none;
   }
   #logoDocta {
     width: 10rem;
@@ -909,6 +946,9 @@ min-width: 852px and max-width: 1200px*/
   }
   .equipo .card__imgContainer {
     height: 15 rem;
+  }
+  .equipo .card__datos--estilos {
+    padding: 1rem;
   }
 }
 @media screen and (max-width: 750px) {
