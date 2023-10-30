@@ -737,6 +737,11 @@ width: 1200px; */
 /* COMIENZO MEDIA QUERYS */
 /* NO PUEDO SOLUCIONAR ESPACIO EN BLANCO A LA DERECHA ENTRE
 min-width: 852px and max-width: 1200px*/
+@media screen and (max-width: 1450px) {
+  .arrow {
+    display: none;
+  }
+}
 @media screen and (max-width: 980px) {
   .equipo__cards {
     max-width: 100%;
