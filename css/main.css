@@ -756,6 +756,9 @@ width: 1200px; */
 }
 @media screen and (max-width: 850px) {
   /* MEDIA INDEX VIDEO */
+  #logoDocta {
+    width: 10rem;
+  }
   .video {
     height: 12rem;
   }
