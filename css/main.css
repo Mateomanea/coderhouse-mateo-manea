@@ -399,7 +399,7 @@ width: 1200px; */
 .estudio__carousel {
   width: 70%;
   height: 40rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -850,7 +850,7 @@ width: 1200px; */
   /* ESTUDIO */
   .estudio {
     max-width: 100%;
-    margin: 0 auto;
+    margin: 1rem auto;
     text-align: center;
   }
   .estudio .estudio__carousel {
@@ -1116,7 +1116,7 @@ width: 1200px; */
   /* MEDIA ESTUDIO */
   .estudio {
     max-width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
     text-align: center;
   }
   .estudio h1 {

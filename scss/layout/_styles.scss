@@ -263,7 +263,7 @@ main {
     &__carousel {
         width: 70%;
         height: 40rem;
-        margin: 0 auto;
+        margin: 1rem auto;
         @include flex(flex, row, center, center);
         overflow: hidden;
         box-shadow: 7px 5px 10px 0px #000000c0;

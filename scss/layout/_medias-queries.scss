@@ -133,7 +133,7 @@
 
     .estudio {
         max-width: 100%;
-        margin: 0 auto;
+        margin: 1rem auto;
         text-align: center;
 
         & .estudio__carousel {
@@ -453,7 +453,7 @@
     /* MEDIA ESTUDIO */
     .estudio {
         max-width: 90%;
-        margin: 0 auto;
+        margin: 1rem auto;
         text-align: center;
 
         & h1 {
@@ -542,7 +542,7 @@
             }
         }
     }
-
+    
     .footer__bottom{
         display: none;
     }
