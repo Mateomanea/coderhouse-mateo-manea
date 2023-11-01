@@ -30,7 +30,7 @@
 
     /* MEDIA INDEX VIDEO */
     .video {
-        height: 13rem;
+        height: 12rem;
     }
 
     .arrow {
@@ -108,8 +108,6 @@
         box-shadow: none;
     }
 
-    /* FIN HEADER */
-
     /* GALERIA */
 
     .galeria__container {
@@ -166,7 +164,6 @@
     .footer__redes  {
         display: none;
     }
-    /* FIN MEDIA FOOTER */
 }
 
 @media screen and (max-width: 800px) {
@@ -193,7 +190,7 @@
     .header__input:checked + .header__nav {
         position: absolute;
         display: block;
-        top: 12rem;
+        top: 11.9rem;
         width: 100%;
         background: #000000ed;
         border-radius: 0 0 3rem 3rem;
@@ -204,7 +201,6 @@
         @include flex(flex,column,space-evenly,center);
 
         & li {
-            border-top: 3px solid $color-gold;
             width: 50%;
             text-align: center;
             padding: 2rem;
