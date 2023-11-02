@@ -1137,6 +1137,7 @@ width: 1200px; */
   .estudio .estudio__carousel {
     width: 90%;
     height: 25rem;
+    box-shadow: 0 0 0 0 rgba(27, 27, 27, 0);
   }
 }
 @media screen and (max-width: 450px) {
