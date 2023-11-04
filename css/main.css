@@ -138,14 +138,14 @@ header {
 .header__imgArtistas,
 .header__imgGaleria,
 .header__imgContacto {
-  background-image: url(../.././assets/img/backgrounds/background-maquina-l.webp);
+  background-image: url(../../assets/img/backgrounds/background-maquina-l.webp);
   background-repeat: no-repeat;
   background-position: center 75%;
   background-size: cover;
 }
 
 .header__imgEstudio {
-  background-image: url(../.././assets/img/img-estudio-artistas/estudio.webp);
+  background-image: url(../../assets/img/img-estudio-artistas/estudio.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
